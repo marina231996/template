@@ -259,14 +259,42 @@
   font-weight: 400;
   line-height: 19px;
 }
+.table-text-color{
+  color: #24b6e1;
+}
 .tab-check {
+  display: none;
+}
+.tab-color{
+  background-image: url(../img/neactivnyi.png);
+  background-repeat: no-repeat;
+  color: #000000;
+  font-family: Tahoma;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  padding: 7px 0 0 20px;
+  width: 128px;
+  height: 26px;
+  display: inline-block;
+  cursor: pointer;
+}
+.tab-check[data-check="1"]:checked ~ .tab-color[data-check="1"],
+.tab-check[data-check="2"]:checked ~ .tab-color[data-check="2"]{
+  background-image: url(../img/fon-active.png);
+  color: #ffffff;
+  width: 94px;
+  height: 26px;
+  padding: 7px 0 0 16px;
 
 }
 .tab-check[data-check="1"]:checked ~ .tab-pane[data-check="1"] {
   display: block;
+
 }
 .tab-check[data-check="2"]:checked ~ .tab-pane[data-check="2"] {
   display: block;
+
 }
 .tab-pane {
   display: none;
@@ -275,6 +303,8 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+  border-top: 1px solid #24b6e2;
+  margin-top: 1px;
 }
 .footer{
   width: 980px;
